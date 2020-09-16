@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./default.css">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex-item {
+            flex: 1 1 auto;
+            /* 오토로 해야 basis가 0이 되지 않아서 크기값을 가질 수 있다. */
+        }
+        .flex-item:nth-child(1) {
+            width: 20%;
+        }
+        .flex-item:nth-child(2) {
+            width: 60%;
+        }
+        .flex-item:nth-child(3) {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est provident doloribus et consequatur quisquam asperiores cumque ex adipisci a cupiditate culpa, similique temporibus atque, maiores ipsa qui? Enim, impedit minima!</div>
+        <div class="flex-item">BB</div>
+        <div class="flex-item">CCCCCCCC</div>
+        <div class="flex-item">DDDDD</div>
+    </div>
+</body>
+</html>
