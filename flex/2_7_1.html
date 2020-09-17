@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            /* 부모에게 width를 주고 margin 0 auto로 가운데 정렬도 가능하다
+            그렇게 하고 자식중 일부에게 margin-left: auto;값을 줘서 밀어내기도 가능하다
+            ex) 부모에게 600을 주고 자식 3개에게 각각 150을 주면 남는 150만큼 margin밀어내기 가능 */
+        }
+
+        .flex-item:nth-child(1) {
+            flex-shrink: 0;
+            width: 150px;
+        }
+        .flex-item:nth-child(2) {
+            flex-grow: 1;
+        }
+        .flex-item:nth-child(3) {
+            flex-shrink: 0;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam laborum, cumque obcaecati corrupti aliquid alias modi deserunt, a sequi illum quo aliquam totam. Asperiores cum tempora saepe quas cumque.</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam laborum, cumque obcaecati corrupti aliquid alias modi deserunt, a sequi illum quo aliquam totam. Asperiores cum tempora saepe quas cumque.</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, magnam laborum, cumque obcaecati corrupti aliquid alias modi deserunt, a sequi illum quo aliquam totam. Asperiores cum tempora saepe quas cumque.</div>
+    </div>
+</body>
+</html>
