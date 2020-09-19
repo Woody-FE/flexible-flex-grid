@@ -23,3 +23,121 @@
 .menu-link:hover {
     color: white;
 }
+
+/* search */
+.search-form {
+    display: flex;
+    height: 40px;
+}
+.search-form input[type='search'] {
+    flex: 1;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 0.3em;
+    font-size: 1rem;
+}
+.search-form input[type='submit'] {
+    width: 4em;
+    border: 0;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    background: gold;
+}
+
+/* bullet list */
+.info-list-item {
+    display: flex;
+    /* 리스트에 플렉스를 처리하면 아이콘에 해당되는 자리랑 텍스트에 해당되는 자리로 공간이 나뉘어 들여쓰기가 된다. */
+    margin: 0.5em 0;
+}
+.info-list-item:before {
+    content: '❤';
+    margin-right: 0.5em;
+}
+
+/* message */
+.user-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.user-photo {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: gold;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+
+/* friend */
+.user-name {
+    /* 긴문장 ...처리 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.friend-item {
+    align-items: center;
+}
+
+/* modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+}
+.dialog {
+    width: 50vw;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+}
+
+/* card-list */
+.card-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.card-image {
+    height: 0;
+    padding-bottom: 60%;
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.card-image img {
+    display: none;
+}
+.card-desc {
+    flex: 1 1 auto;
+    padding: 1em;
+    background:white;
+}
+@media (min-width: 600px) {
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+    }
+    .card-item {
+        width: 50%;
+        padding: 0 1rem;
+    }
+}
+@media (min-width: 1200px) {
+    .card-item {
+        width: 33.33%;
+    }
+}
